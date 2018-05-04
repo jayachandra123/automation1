@@ -1,0 +1,27 @@
+#!/bin/bash
+echo "nginx installation"
+yum install wget -y
+
+wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+#curl http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -o epel-release-latest-7.noarch.rpm
+
+rpm -ivh epel-release-latest-7.noarch.rpm
+
+yum update
+
+yum install nginx -y
+
+cd /etc/nginx/
+
+systemctl start nginx
+
+systemctl stop nginx
+
+systemctl enable nginx
+
+systemctl start nginx
+
+ps -ef | grep nginx
+
+netstat -anlp | grep ":80"
