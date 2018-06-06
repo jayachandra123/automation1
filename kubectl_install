@@ -14,7 +14,20 @@ yum install -y kubectl
 
 
 ====================================>>>>>>
-
+#Docker installaltion for my usage not in job env
+    1 cd /etc/yu.repos.d
+    2  cd /etc/yum.repos.d/
+    3  ls
+    4  vi redhat-rhui.repo-------->:%s/enabled=1/enabled=0/g  
+    5  yum install wget
+    6  vi redhat-rhui.repo--------->:%s/enabled=0/enabled=1/g
+    7  yum install wget
+    8  yum install docker
+    9  clear
+   10  docker version
+   11  systemctl start docker
+   12  systemctl status docker
+   13  history
 
 
 
