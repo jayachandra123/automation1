@@ -28,7 +28,24 @@ yum install -y kubectl
    11  systemctl start docker
    12  systemctl status docker
    13  history
+===============================================>>>>>>>>>
+#Another steps to install docker in redhat:
 
+  yum  -y remove  docker-common docker container-selinux docker-selinux docker-engine
+
+  yum -y install  wget
+
+wget https://download.docker.com/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker-ce.repo
+
+yum -y install docker-ce
+
+yum install docker device-mapper-libs device-mapper-event-libs
+
+ which docker
+
+ systemctl start docker.service
+
+ps -ef | grep docker
 
 
 
