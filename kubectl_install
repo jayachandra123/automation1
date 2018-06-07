@@ -49,3 +49,54 @@ ps -ef | grep docker
 
 
 
+=============================================================>>>>>>>>.
+
+#MINIKUBE with kubectl in windows........
+
+install minikube installer msi in windows 
+
+https://github.com/kubernetes/minikube/releases/download/v0.27.0/minikube-installer.exe
+
+Install kubectl in windows
+
+i am using chocolate........
+
+choco install kubernetes-cli
+
+Download yaml files and start with kubectl
+
+https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/mysql-deployment.yaml
+
+kubectl create secret generic mysql-pass --from-literal=password=YOUR_PASSWORD
+
+kubectl get secrets
+
+ kubectl create -f mysql-deployment.yaml
+ 
+ 
+ kubectl get pods
+ 
+ Download wordpress yaml...file
+ 
+ kubectl get pvc
+ 
+ https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/wordpress-deployment.yaml
+ 
+ kubectl get pvc
+ 
+ kubectl get services wordpress
+ 
+ #The EXTERNAL-IP is always <pending>.
+ 
+ minikube service wordpress --url
+ 
+ http://1.2.3.4:32406
+ 
+ search your url...in browser......
+ 
+ 
+
+
+
+
+
