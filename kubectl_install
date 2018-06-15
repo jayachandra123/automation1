@@ -10,6 +10,18 @@ repo_gpgcheck=1
 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 EOF
 yum install -y kubectl
+=============================================
+cpu utilization ..
+
+yum install sysstat
+
+mpstat
+
+[root@ip-172-31-20-90 ~]# mpstat
+Linux 3.10.0-862.el7.x86_64 (ip-172-31-20-90.ec2.internal)      06/15/2018     _                                                                                        x86_64_ (1 CPU)
+
+10:25:42 AM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest                                                                                          %gnice   %idle
+10:25:42 AM  all    4.14    0.02    0.38    0.20    0.00    0.01    0.16    0.00                                                                                            0.00   95.10
 
 
 
